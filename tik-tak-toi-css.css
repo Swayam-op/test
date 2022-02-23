@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("sea.jpg");
+}
+/* start page css is written below */
+#startgame{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.input{
+    box-sizing: border-box;
+    width: 25rem;
+    height: 15rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+input{
+    width: 14rem;
+    height:1.8rem;
+    margin-top: 1.7rem;
+    border: 1px solid rgb(165, 78, 132);
+    border-radius: 1px;
+}
+.go{
+    margin-top: 1rem;
+    width: 7rem;
+    height: 2.2rem;
+    border: 1px solid pink;
+    margin-left: 3rem;
+    align-items: center;
+    line-height: 2rem;
+    color: #fff;
+    background-color: pink;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
+}
+.go:hover{
+    color: black;
+}
+  /* Game part has written below */
+
+#game_board{
+  
+   position: absolute;
+   top: 0px;
+   left: 0px;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+   
+    box-sizing: border-box;
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
+
+
+}
+.game_box{
+    /* border: 3px solid greenyellow; */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fbb034;
+background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.line{
+    display: flex;
+   
+    
+}
+.box{
+    text-transform: capitalize;
+    
+    font-size: 12em;
+    line-height: 80%;
+    text-align: center;
+    width: 13rem;
+    height: 10rem;
+    border: 1px solid rgb(42, 127, 197);
+    border-radius: 10px;
+    margin: .2rem;
+    background-color: #39CCCC;
+    transition: 0.5s background ease-out;
+    cursor: pointer;
+}
+.box:hover{
+    background:#228999;
+}
+/* After end of the game */
+#endOf{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all;
+    transition-delay: 1s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.result{
+    position: relative;
+    width: 23rem;
+    height: 14rem;
+    
+    text-align: center;
+    padding: 4rem;
+    font-size: 2em;
+    font-family: cursive;
+    /* background-color: #e899dc;
+background-image: linear-gradient(315deg, #e899dc 0%, #d387ab 74%); */
+    background-color: #e899dc;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    color: #121212;
+    border: 10px solid white;
+text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    transition: all 0.3s ease-out;
+    transform: scale(1);
+    
+}
+
+#playerwin{
+    color: rgb(14, 105, 14);
+    font-weight: bold;
+}
+#playerlose{
+    color:rgb(143, 29, 29);
+    font-weight: bold;
+}
+/* after draw of the game */
+#draw{
+    position: absolute;
+    
+    /* border-left: 12px solid yellow; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all;
+    transition-delay: 1s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+.drw-text{
+    color: #fbb034;
+    font-size: 5rem;
+}
+.playAgain{
+    position: absolute;
+    left: 13%;
+    bottom: 10%;
+    font-size: 0.7em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    width: 10rem;
+    padding: 0.2rem;
+    background-color: green;
+    color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.3s ease-out;
+}
+.playAgain:hover{
+ transform:translateY(-10px);
+}
+.back{
+    position: absolute;
+    right : 13%;
+    bottom: 10%;
+    font-size: 0.7em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    width: 10rem;
+    padding: 0.2rem;
+    background-color: red;
+    color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.3s ease-out;
+     
+}
+.back:hover{
+    transform:translateY(-10px);
+   }
+
+@media (max-width:998px)
+{
+    
+ .box{
+     width: 6rem;
+    height: 6rem;
+    font-size: 6em;
+    line-height: 6rem;
+ }
+ .result{
+     width: 100wh;
+     height: 25vh;
+     font-size: 1em;
+     border: 2px solid white;
+    
+ }
+ .playAgain,.back{
+     padding-top: 0.5rem;
+     box-sizing: border-box;
+     text-align: center;
+     width: 6rem;
+     height: 5vh;
+ }
+}

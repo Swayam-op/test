@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="tik-tak-toi-css.css">
+<script type="text/javascript" src="tik-tak-toi-js.js"></script>
+<body>
+   <div id="startgame">
+       <div class="input">
+           <form action="">
+               <input type="text" placeholder="player 1" maxlength="8" id="player-1"><br>
+               <input type="text" placeholder="player 2" maxlength="8" id="player-2">
+               <div class="go" onclick="startGame()"><center>Start Game</center> </div>
+           </form>
+       </div>
+   </div>
+    <div class="w" id="draw">
+        <div class="result"><span class="drw-text"> Draw </span>
+        <div class="playAgain" onclick="playAgain()">Play Again</div>
+        <div class="back" onclick="location.reload();">Back</div>
+       </div>
+       </div>
+    <div class="end" id="endOf">
+     <div class="result">WINNER : <span id="playerwin"></span><br><br>
+     LOSER:  <span id="playerlose"></span>
+     <div class="playAgain" onclick="playAgain()">Play Again</div>
+     <div class="back" onclick="location.reload();">Back</div>
+    </div>
+    </div>
+    <div id="game_board">
+        <div class="game_box">
+          <div class="line">
+              <div class="box" id="box1" onclick="valueSet(this.id)"></div>
+              <div class="box" id="box2" onclick="valueSet(this.id)"></div>
+              <div class="box" id="box3" onclick="valueSet(this.id)"></div>
+          </div>
+          <div class="line">
+            <div class="box" id="box4" onclick="valueSet(this.id)"></div>
+            <div class="box" id="box5" onclick="valueSet(this.id)"></div>
+            <div class="box" id="box6" onclick="valueSet(this.id)"></div>
+        </div>
+        <div class="line">
+            <div class="box" id="box7" onclick="valueSet(this.id)"></div>
+            <div class="box" id="box8" onclick="valueSet(this.id)"></div>
+            <div class="box" id="box9" onclick="valueSet(this.id)"></div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
